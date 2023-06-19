@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1</h2>
+    <p>Solicitar al usuario que responda a la pregunta (“¿Eres bellisimo/a?”), en caso de contestar <strong>si</strong>,
+        responder “Ciertamente”, en caso de contestar <strong>no</strong>, responder: “No te creo”.</p>
+    <form onsubmit="return ejercicioN1()">
+        <label for="">Por favor responda si o no </label>
+        <input type="text" id="bello">
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan1"></div>
+    </form>
+    <hr>
+
+    <h2>Ejercicio 2</h2>
+    <p>Solicitar al usuario un número, y determinar si es divisible entre dos o no. Mostrando al usuario un mensaje de
+        “x número es divisible entre 2” o “x núm no es divisible entre 2</p>
+    <form onsubmit="return ejercicioN2()">
+        <label for="">Por favor ingrese un número </label>
+        <input type="text" id="numero">
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan2"></div>
+    </form>
+
+    <hr>
+
+    <h2>Ejercicio 3</h2>
+    <p>Crear un programa que determine si un número introducido en un Prompt es par o no, la respuesta será mostrada
+        en un Alert.</p>
+
+    <button onclick="ejercicioN3()">Ingresar Número</button>
+
+    <hr>
+
+    <h2>Ejercicio 4</h2>
+    <p>Solicitar al usuario un número de cliente. Si el número es el 1000, imprimir 'Ganaste un premio', en caso
+        contrario mostrar el número y el mensaje “Lo sentimos, sigue participando”.</p>
+    <form onsubmit="return ejercicioN4()">
+        <label for="">Por favor ingrese un número de cliente </label>
+        <input type="text" id="numero_cliente">
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan4"></div>
+    </form>
+
+    <hr>
+
+    <h2>Ejercicio 5</h2>
+    <p>Solicitar al usuario que ingrese dos números y mostrar cuál de los dos es menor. No considerar el caso en que
+        ambos números son iguales.</p>
+    <form onsubmit="return ejercicioN5()">
+        <label for="">Por favor ingrese un número </label>
+        <input type="text" id="numeroUno">
+        <br>
+        <br>
+        <label for="">Por favor ingrese un segundo número </label>
+        <input type="text" id="numeroDos">
+        <br>
+        <br>
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan5"></div>
+    </form>
+
+    <hr>
+
+    <h2>Ejercicio 6</h2>
+    <p>Solicitar al usuario que ingrese tres números y mostrar cuál de los tres es el número mayor. Considerar el caso
+        en que 2 números sean iguales</p>
+    <form onsubmit="return ejercicioN6()">
+        <label for="">Por favor ingrese un número </label>
+        <input type="text" id="nUno">
+        <br>
+        <br>
+        <label for="">Por favor ingrese un segundo número </label>
+        <input type="text" id="nDos">
+        <br>
+        <br>
+        <label for="">Por favor ingrese un tercer número </label>
+        <input type="text" id="nTres">
+        <br>
+        <br>
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan6"></div>
+    </form>
+
+    <hr>
+
+    <h2>Ejercicio 7</h2>
+    <p>Requerir al usuario que ingrese un día de la semana e imprimir un mensaje si es lunes, otro mensaje diferente si
+        es viernes, otro mensaje diferente si es sábado o domingo. Si el día ingresado no es ninguno de esos, imprimir
+        otro mensaje.</p>
+    <form onsubmit="return ejercicioN7()">
+        <label for="">Por favor ingrese un día de la semana </label>
+        <input type="text" id="semana">
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan7"></div>
+    </form>
+
+    <hr>
+
+
+    <h2>Ejercicio 8</h2>
+    <p>Solicitar al usuario una calificación (entre 1 y 10). Luego se debe comprobar que el número efectivamente esté en
+        ese rango, si no lo está imprima un mensaje de error. Si lo está, imprima “reprobado” si la calificación es
+        inferior a 6, “regular” si está entre 6 y 8, “bien” si es 9, y por último, “excelente” si es 10.</p>
+    <form onsubmit="return ejercicioN8()">
+        <label for="">Por favor ingrese un número </label>
+        <input type="text" id="numero_calificacion">
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan8"></div>
+    </form>
+
+    <hr>
+
+
+    <h2>Ejercicio 9</h2>
+    <p>Escribe un programa que responda a un usuario que quiere comprar un helado en una conocida marca de comida rápida
+        cuánto le costará en función del topping que elija.
+    </p>
+    <p> El helado sin topping cuesta 50 MXN</p>
+    <p> El topping de oreo cuesta 10 MXN.</p>
+    <p>El topping de KitKat cuesta 15 MXN.</p>
+    <p>El topping de brownie cuesta 20 MXN.</p>
+    <p>En caso de no disponer del topping solicitado por el usuario, el programa le indicará “no tenemos este topping,
+        lo sentimos.” y a continuación le informará el precio del helado sin ningún topping.
+
+    </p>
+    <form onsubmit="return ejercicioN9()">
+        <label for="">Por favor seleccione un topping para tu helado </label>
+        <select name="" id="seleccion_topping">
+            <option value="0">Sin Topping - $50 mxn </option>
+            <option value="1">Topping Oreo - $10 mxn </option>
+            <option value="2">Topping KitKat - $15 mxn</option>
+            <option value="3">Topping brownie - $20 mxn</option>
+            <option value="4">Topping Gomitas - $23 mxn</option>
+        </select>
+        <input type="submit" value="Agregar Topping">
+        <div id="respuestan9"></div>
+    </form>
+    <hr>
+
+    <h2>Ejercicio 10</h2>
+
+    <p>Un conocido portal de educación en tecnología está ofreciendo programas para aprender a desarrollar aplicaciones.
+        Escribe un programa que le indique a la persona interesada cuánto deberá pagar mensualmente de acuerdo a la
+        opción elegida.
+        El programa educativo contempla 3 diferentes niveles, cada uno con su costo mensual
+    </p>
+
+    <p> Course: $4999 MXN </p>
+    <p> Carrera $3999 MXN</p>
+    <p> Master: $2999 MXN</p>
+
+    <p> Adicionalmente preguntar si cuenta con alguna beca y aplicar el descuento correspondiente al precio final.</p>
+    <p> Beca Facebook: 20% de descuento.</p>
+    <p> Beca Google: 15% de descuento.</p>
+    <p> Beca Jesua: 50% de descuento.</p>
+
+    <p>Curso: 2 meses</p>
+    <p>Carrera 6 meses</p>
+    <p>Master: 12 meses</p>
+
+
+    <form onsubmit="return ejercicio10()">
+        <label for="">Por favor seleccione un curso, una carrera o un Master y si cuenta con alguna beca </label>
+        <br>
+        <br>
+        <select name="" id="cursos">
+            <option value="Curso">Curso</option>
+            <option value="Carrera">Carrera </option>
+            <option value="Master">Master</option>
+        </select>
+        <br>
+        <br>
+        <select name="" id="beca">
+            <option value="facebook">Beca Facebook</option>
+            <option value="google">Beca Google </option>
+            <option value="jesua">Beca Jesua</option>
+        </select>
+        <input type="submit" value="Agregar Curso">
+        <div id="respuestan10"></div>
+    </form>
+    <hr>
+    <h2>Ejercicio 11</h2>
+
+    <p>Realizar un programa que ayude a calcular el total a pagar de acuerdo a la distancia recorrida por un vehículo
+        con cargo extra por los litros consumidos, tomando en consideración lo siguiente:
+    </p>
+
+    <p>Si el vehículo es “coche”, el precio kilometro ha de ser 0.20, si es “moto” ha de ser 0.10 y si es “autobús” 0.5.
+    </p>
+    <p> Si los litros consumidos están entre 0 y 100 se ha de añadir 5 al costo total, si es mayor la cantidad de litros
+        consumidos se ha de añadir 10 al total.
+    </p>
+
+    <form onsubmit="return ejercicio11()">
+        <label for="">Por favor seleccione el tipo de vehiculo </label>
+        <br>
+        <br>
+        <select name="" id="vehiculo">
+            <option value="Coche">Coche</option>
+            <option value="Moto">Moto </option>
+            <option value="Autobus">Autobus</option>
+        </select>
+        <br>
+        <br>
+        <label for="">Indique los kilometros recorridos </label>
+        <input type="text" id="km"> <br>
+        <label for="">Indique los litros consumidos </label> 
+        <input type="text" id="litros">
+        <input type="submit" value="Enviar Respuesta">
+        <div id="respuestan11"></div>
+    </form>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
